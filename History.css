@@ -1,0 +1,81 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1,
+h2 {
+  color: #ffcc00; /* Yellow color for headings */
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1.1em; /* Increase font size */
+}
+
+em {
+  font-style: italic;
+}
+
+.documentation-photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.documentation-photos .photo {
+  position: relative; /* Make the container relative for absolute positioning of caption */
+  overflow: hidden; /* Hide overflow of caption */
+}
+
+.documentation-photos img {
+  width: 100%; /* Set image width to 100% for responsiveness */
+  height: auto; /* Allow image height to adjust accordingly */
+  object-fit: cover; /* Maintain aspect ratio while filling the box */
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.documentation-photos img:hover {
+  transform: scale(1.1); /* Scale up image on hover */
+}
+
+.documentation-photos .photo figcaption {
+  position: absolute;
+  bottom: -50px; /* Initially hide caption below image */
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  text-align: center;
+  transition: bottom 0.3s ease; /* Add transition for smooth animation */
+}
+
+.documentation-photos .photo:hover figcaption {
+  bottom: 0; /* Move caption up on hover */
+}
+
+/* Media query for responsiveness on smaller screens */
+@media only screen and (max-width: 768px) {
+  h1,
+  h2 {
+    font-size: 1.5em; /* Increase font size for headings on smaller screens */
+  }
+
+  p {
+    font-size: 1em; /* Adjust font size for paragraphs on smaller screens */
+  }
+}
